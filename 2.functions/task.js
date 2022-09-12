@@ -31,7 +31,7 @@ function worker(arr) {
   return sum;
 }
 
-function makeWork(arrOfArr, worker) {
+function makeWork(arrOfArr, worker, ) {
   let max = -Infinity;
   for (let i = 0; i < arrOfArr.length; i++) {
     let totalSum = worker(arrOfArr[i]);
@@ -44,5 +44,6 @@ function makeWork(arrOfArr, worker) {
 
 //Задание 3
 function worker2(arr) {
-  return getArrayParams(arr).max - getArrayParams(arr).min;
+  let res = getArrayParams(arr).max - getArrayParams(arr).min;
+  return Math.abs(res);
 }
