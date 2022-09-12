@@ -32,7 +32,7 @@ function worker(arr) {
 }
 
 function makeWork(arrOfArr, worker) {
-  let max = 0;
+  let max = -Infinity;
   for (let i = 0; i < arrOfArr.length; i++) {
     let totalSum = worker(arrOfArr[i]);
     if (totalSum > max) {
