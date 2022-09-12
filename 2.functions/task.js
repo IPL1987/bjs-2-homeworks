@@ -4,7 +4,7 @@
 let arr = [-99, 75, 10]
 function getArrayParams(arr) {
   let min = Math.min(...arr);
-  let max = Math.min(...arr);
+  let max = Math.max(...arr);
   let sum = 0;
 
   for (let elem of arr) {
