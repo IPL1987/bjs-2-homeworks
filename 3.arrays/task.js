@@ -1,15 +1,13 @@
+'use strict'
+
 function compareArrays(arr1, arr2) {
-  let result;
+  let result = arr1.every((elem, index) => elem === arr2[index]) && arr1.length === arr2.length;
 
-  // Ваш код
-
-  return result; // boolean
+  return result;
 }
 
 function advancedFilter(arr) {
-  let resultArr;
+  let resultArr = arr.filter(elem => elem > 0 && elem % 3 === 0).map(elem => elem * 10);
 
-  // Ваш код
-
-  return resultArr; // array
+  return resultArr;
 }
