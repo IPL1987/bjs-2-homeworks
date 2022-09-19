@@ -9,9 +9,6 @@ let student1 = new Student('first', 'male', '18');
 let student2 = new Student('secons', 'male', '20');
 let student3 = new Student('third', 'female', '18');
 
-console.log(student1)
-console.log(student2)
-console.log(student3)
 Student.prototype.setSubject = function (subjectName) {
   this.subject = subjectName;
 }
@@ -21,7 +18,7 @@ Student.prototype.addMark = function (mark) {
 }
 
 Student.prototype.addMarks = function (...marks) {
-  this.marks === undefined ? this.marks = [...marks] : this.marks.push(...marks);
+  this.marks = marks;
 }
 
 Student.prototype.getAverage = function () {
