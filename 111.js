@@ -9,13 +9,13 @@
 // let array=[1,2,3,4,5,667]
 // array.forEach((element, index, array) => console.log(element, index, array));
 
-function print(first, seccond, ...args) {
-  console.log(first, seccond)
-  for (let i in args) {
-    console.log( i)
-  }
-}
-print(1, 1, 1, 55, 3, 7, 6, 9, 3, 7)
+// function print(first, seccond, ...args) {
+//   console.log(first, seccond)
+//   for (let i in args) {
+//     console.log( i)
+//   }
+// }
+// print(1, 1, 1, 55, 3, 7, 6, 9, 3, 7)
 
 // function result (...params) {
 //   let sum = 0;
@@ -33,3 +33,20 @@ print(1, 1, 1, 55, 3, 7, 6, 9, 3, 7)
 //   console.log("привет")
 // }
 // hell ();
+
+class Human{
+	constructor(name, lastName, age = null){
+		this.name = name;
+		this.lastName = lastName;
+		this.gender = "мужчина";
+		this.type = "человек";
+		this.age = age;
+	}
+}
+
+let persons  = [
+	new Human("Олег", "Петров", 15),
+	new Human("Иван", "Иванов", 20),
+	new Human("Никита", "Романов"),
+]
+Human
