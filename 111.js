@@ -34,19 +34,19 @@
 // }
 // hell ();
 
-class Human{
-	constructor(name, lastName, age = null){
-		this.name = name;
-		this.lastName = lastName;
-		this.gender = "мужчина";
-		this.type = "человек";
-		this.age = age;
-	}
-}
+// class Human{
+// 	constructor(name, lastName, age = null){
+// 		this.name = name;
+// 		this.lastName = lastName;
+// 		this.gender = "мужчина";
+// 		this.type = "человек";
+// 		this.age = age;
+// 	}
+// }
 
-let persons  = [
-	new Human("Олег", "Петров", 15),
-	new Human("Иван", "Иванов", 20),
-	new Human("Никита", "Романов"),
-]
-Human
+// let persons  = [
+// 	new Human("Олег", "Петров", 15),
+// 	new Human("Иван", "Иванов", 20),
+// 	new Human("Никита", "Романов"),
+// ]
+// console.log(persons)
