@@ -1,6 +1,6 @@
 'use strict'
 
-//  Task_1
+//   Task_1
 class AlarmClock {
   constructor() {
     this.alarmCollection = [];
