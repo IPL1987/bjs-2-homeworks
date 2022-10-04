@@ -50,3 +50,22 @@
 // 	new Human("Никита", "Романов"),
 // ]
 // console.log(persons)
+
+function async() {
+  const element = new Date();
+  setTimeout(() => {
+    const now = new Date()
+    console.log(now - element)
+  }, 1000)
+}
+function sum() {
+  let sum = 0;
+  for (let i = 0; i < 1000000; i++) {
+    sum += 1;
+  }
+  return sum
+}
+for (let i = 0; i < 10; i++) {
+async();
+//sum();
+}
