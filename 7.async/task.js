@@ -17,8 +17,10 @@ class AlarmClock {
   }
 
   removeClock(id) {
+    const start = this.alarmCollection.length;
     this.alarmCollection = this.alarmCollection.filter(call => call.idCall !== id);
-    return this.alarmCollection.length < this.alarmCollection.length;
+    const end = this.alarmCollection.length;
+    return start > end;
   }
 
   getCurrentFormattedTime() {
@@ -27,10 +29,12 @@ class AlarmClock {
 
   start() {
     function checkClock(call) {
-      if (call === this.getCurrentFormattedTime()) {
-        return fnCallback();
+      const checkClock = checkClock.bind(this.call);
+      if (call.time === this.getCurrentFormattedTime()) {
+        return call.fnCallback();
       }
     }
+    
     if (this.timerId === null) {
       this.timerId = setInterval(() => {
         this.alarmCollection.forEach(call => checkClock(call));
