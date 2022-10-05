@@ -29,15 +29,13 @@ class AlarmClock {
 
   start() {
     function checkClock(call) {
-      const checkClock = checkClock.bind(this.call);
       if (call.time === this.getCurrentFormattedTime()) {
         return call.fnCallback();
       }
     }
-    
     if (this.timerId === null) {
       this.timerId = setInterval(() => {
-        this.alarmCollection.forEach(call => checkClock(call));
+        this.alarmCollection.forEach(call => checkClock.bind(call));
       }, 1000);
     }
     return;
