@@ -35,6 +35,5 @@ function debounceDecoratorNew(func, ms) {
   };
   wrapper.count = 0;
   wrapper.allCount = [];
-
   return wrapper;
 }
