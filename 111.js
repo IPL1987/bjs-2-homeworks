@@ -88,11 +88,11 @@
 //   }
 //   return wrapper;
 // }
-function debounceDecoratorNew(func) {
+//function debounceDecoratorNew(func) {
   // Ваш код
-}
+//}
 
-// //Задача 2. Debounce декоратор с моментальным вызовом
+//Задача 2. Debounce декоратор с моментальным вызовом
 // function debounceDecoratorNew(func, ms) {
 //   // Ваш код
 //   let timeout;
@@ -141,23 +141,3 @@ function debounceDecoratorNew(func) {
 
 //     return wrapper;
 // }
-function debounceDecoratorNew(func, ms) {
-  let timeout = null;
-  function wrapper(...args) {
-    if (timeout) {
-      wrapper.count++;
-      wrapper.allCount.push(args);
-      return func.call(this, ...args);
-    }
-    clearTimeout(timeout);
-
-    timeout = setTimeout(() => {
-      timeout = null;
-      func.call(this, ...rest);
-      wrapper.count++;
-    }, ms);
-  };
-  wrapper.allCount = [];
-
-  return wrapper;
-}
