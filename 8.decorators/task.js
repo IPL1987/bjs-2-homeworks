@@ -26,15 +26,13 @@ function debounceDecoratorNew(func, ms) {
     if (flag) {
       flag = false;
       wrapper.count++;
-      func.call(this, ...rest);
+      func.call(this, ...args);
       }
-    clearTimeout(timeout);
 
     timeout = setTimeout(() => {
       flag = true;
       wrapper.count++;
-      func.call(this, ...rest);
-      
+      func.call(this, ...args);
     }, ms);
   };
   wrapper.count = 0;
