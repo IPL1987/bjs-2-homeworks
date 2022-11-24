@@ -1,4 +1,5 @@
 'use strict'
+debugger
 function Student(name, gender, age) {
   this.name = name;
   this.gender = gender;
@@ -22,11 +23,13 @@ Student.prototype.addMarks = function (...marks) {
 }
 
 Student.prototype.getAverage = function () {
-  let avg = 0;
-  for (let elem in this.marks) {
-    avg += this.marks[elem]
-  }
-  return avg / this.marks.length
+  let average = Math.sum(...this.marks) / this.marks.length
+  return average;
+  // let avg = 0;
+  // for (let elem in this.marks) {
+  //   avg += this.marks[elem]
+  // }
+  // return avg / this.marks.length
 }
 
 Student.prototype.exclude = function (reason) {
